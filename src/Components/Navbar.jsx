@@ -1,10 +1,13 @@
 import React from 'react'
+import { Link } from "react-router-dom"
+import './navbar.css'
 
 function Navbar() {
   return (
-    <>
-    {/* contain 2 links: home and feedback form */}
-    </>
+    <div className="navbar">
+      <Link to="/">Home</Link>
+      <Link to="/feedback">Feedback</Link>
+    </div>
   )
 }
 

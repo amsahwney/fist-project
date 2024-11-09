@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee+Tint&family=Cherry+Bomb+One&family=Scope+One&family=Uncial+Antiqua&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Uncial Antiqua", system-ui;
+    font-weight: 400;  
+}
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    /* text-align: center; */
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #f0f0f0;
+}
+  
+a {
+    margin-right: 1rem;
+    color: #333;
+    text-decoration: none;
+}
+  
+a:hover {
+    background: #ddd;
+    color: #e367a6;
+}
