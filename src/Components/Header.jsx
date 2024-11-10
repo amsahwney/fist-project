@@ -9,6 +9,7 @@ import tiredImg from 'src/assets/tired.svg';
 import tiredHoverImg from 'src/assets/tired-hover.svg';
 import upsetImg from 'src/assets/upset.svg';
 import upsetHoverImg from 'src/assets/upset-hover.svg';
+import { Link } from 'lucide-react';
 
 function Header() {
   const [emotionImages, setEmotionImages] = useState({
@@ -75,43 +76,55 @@ function Header() {
     }
   };
 
+  
+
   return (
     <div style={{ backgroundImage: 'url(src/assets/meadow-homepage.jpeg)' }}>
-      <img
-        src={emotionImages.excited}
-        onMouseEnter={() => handleMouseEnter('excited')}
-        onMouseLeave={() => handleMouseLeave('excited')}
-        alt="Excited"
-        title={hoveredEmotion === 'excited' ? 'Excited' : ''} 
-      />
-      <img
-        src={emotionImages.proud}
-        onMouseEnter={() => handleMouseEnter('proud')}
-        onMouseLeave={() => handleMouseLeave('proud')}
-        alt="Proud"
-        title={hoveredEmotion === 'proud' ? 'Proud' : ''} 
-      />
-      <img
-        src={emotionImages.stressed}
-        onMouseEnter={() => handleMouseEnter('stressed')}
-        onMouseLeave={() => handleMouseLeave('stressed')}
-        alt="Stressed"
-        title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
-      />
-      <img
-        src={emotionImages.tired}
-        onMouseEnter={() => handleMouseEnter('tired')}
-        onMouseLeave={() => handleMouseLeave('tired')}
-        alt="Tired"
-        title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
-      />
-      <img
-        src={emotionImages.upset}
-        onMouseEnter={() => handleMouseEnter('upset')}
-        onMouseLeave={() => handleMouseLeave('upset')}
-        alt="Upset"
-        title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
-      />
+      <a href="emotions/excited">
+        <img
+          src={emotionImages.excited}
+          onMouseEnter={() => handleMouseEnter('excited')}
+          onMouseLeave={() => handleMouseLeave('excited')}
+          alt="Excited"
+          title={hoveredEmotion === 'excited' ? 'Excited' : ''} 
+        />
+      </a>
+      <a href="emotions/proud">
+        <img
+          src={emotionImages.proud}
+          onMouseEnter={() => handleMouseEnter('proud')}
+          onMouseLeave={() => handleMouseLeave('proud')}
+          alt="Proud"
+          title={hoveredEmotion === 'proud' ? 'Proud' : ''} 
+        />
+      </a>
+      <a href="emotions/stressed">
+        <img
+          src={emotionImages.stressed}
+          onMouseEnter={() => handleMouseEnter('stressed')}
+          onMouseLeave={() => handleMouseLeave('stressed')}
+          alt="Stressed"
+          title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
+        />
+      </a>
+      <a href="emotions/tired">
+        <img
+          src={emotionImages.tired}
+          onMouseEnter={() => handleMouseEnter('tired')}
+          onMouseLeave={() => handleMouseLeave('tired')}
+          alt="Tired"
+          title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
+        />
+      </a>
+      <a href="emotions/upset">
+        <img
+          src={emotionImages.upset}
+          onMouseEnter={() => handleMouseEnter('upset')}
+          onMouseLeave={() => handleMouseLeave('upset')}
+          alt="Upset"
+          title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
+        />
+      </a>
       <h1>How are you?</h1>
     </div>
   );
