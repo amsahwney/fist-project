@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import excitedImg from 'src/assets/excited.svg';
-import excitedHoverImg from 'src/assets/excited-hover.svg';
-import proudImg from 'src/assets/proud.svg';
-import proudHoverImg from 'src/assets/proud-hover.svg';
-import stressedImg from 'src/assets/stressed.svg';
-import stressedHoverImg from 'src/assets/stressed-hover.svg';
-import tiredImg from 'src/assets/tired.svg';
-import tiredHoverImg from 'src/assets/tired-hover.svg';
-import upsetImg from 'src/assets/upset.svg';
-import upsetHoverImg from 'src/assets/upset-hover.svg';
-import { Link } from 'lucide-react';
+
+import excitedImg from '../assets/excited.svg';
+import excitedHoverImg from '../assets/excited-hover.svg';
+import proudImg from '../assets/proud.svg';
+import proudHoverImg from '../assets/proud-hover.svg';
+import stressedImg from '../assets/stressed.svg';
+import stressedHoverImg from '../assets/stressed-hover.svg';
+import tiredImg from '../assets/tired.svg';
+import tiredHoverImg from '../assets/tired-hover.svg';
+import upsetImg from '../assets/upset.svg';
+import upsetHoverImg from '../assets/upset-hover.svg';
 
 function Header() {
   const [emotionImages, setEmotionImages] = useState({
