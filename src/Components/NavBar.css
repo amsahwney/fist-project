@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee+Tint&family=Cherry+Bomb+One&family=Scope+One&family=Uncial+Antiqua&display=swap");
 
-* {
+.navbar {
     margin: 0;
     padding: 0;
     font-family: "Uncial Antiqua", system-ui;
@@ -8,21 +8,29 @@
 }
 .navbar {
     overflow: hidden;
-    position: fixed;
-    /* text-align: center; */
+    /* Please avoid position: fixed when possible. It does weird things 
+    how the elements are situated in the stacking context
+
+    see: MDN article on stacking context
+     */
+    /* position: fixed; */
+    text-align: center;
     top: 0;
-    width: 100%;
+    left:0;
+    min-width: 100vw;
     padding: 1rem;
     background-color: #f0f0f0;
+
+    /* I mnested these a element changes so they do not effect the sibling puppy container */
+    a {
+        margin-right: 1rem;
+        color: #333;
+        text-decoration: none;
+    }
+      
+    a:hover {
+        background: #ddd;
+        color: #e367a6;
+    }
 }
   
-a {
-    margin-right: 1rem;
-    color: #333;
-    text-decoration: none;
-}
-  
-a:hover {
-    background: #ddd;
-    color: #e367a6;
-}

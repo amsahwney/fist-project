@@ -1,0 +1,19 @@
+.background-img {
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height:100vh;
+}
+
+.puppies-container {
+    display:flex;
+    flex-direction: row;
+    /* flex direction is redundant because row is default but i want to remember the default */
+    
+}
+
+.prompt {
+    text-align: center;
+}

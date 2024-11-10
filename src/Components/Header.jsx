@@ -10,6 +10,7 @@ import tiredImg from '../assets/tired.svg';
 import tiredHoverImg from '../assets/tired-hover.svg';
 import upsetImg from '../assets/upset.svg';
 import upsetHoverImg from '../assets/upset-hover.svg';
+import "./header.css" 
 
 function Header() {
   const [emotionImages, setEmotionImages] = useState({
@@ -79,54 +80,58 @@ function Header() {
   
 
   return (
-    <div style={{ backgroundImage: 'url(src/assets/meadow-homepage.jpeg)' }}>
-      <a href="emotions/excited">
-        <img
-          src={emotionImages.excited}
-          onMouseEnter={() => handleMouseEnter('excited')}
-          onMouseLeave={() => handleMouseLeave('excited')}
-          alt="Excited"
-          title={hoveredEmotion === 'excited' ? 'Excited' : ''} 
-        />
-      </a>
-      <a href="emotions/proud">
-        <img
-          src={emotionImages.proud}
-          onMouseEnter={() => handleMouseEnter('proud')}
-          onMouseLeave={() => handleMouseLeave('proud')}
-          alt="Proud"
-          title={hoveredEmotion === 'proud' ? 'Proud' : ''} 
-        />
-      </a>
-      <a href="emotions/stressed">
-        <img
-          src={emotionImages.stressed}
-          onMouseEnter={() => handleMouseEnter('stressed')}
-          onMouseLeave={() => handleMouseLeave('stressed')}
-          alt="Stressed"
-          title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
-        />
-      </a>
-      <a href="emotions/tired">
-        <img
-          src={emotionImages.tired}
-          onMouseEnter={() => handleMouseEnter('tired')}
-          onMouseLeave={() => handleMouseLeave('tired')}
-          alt="Tired"
-          title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
-        />
-      </a>
-      <a href="emotions/upset">
-        <img
-          src={emotionImages.upset}
-          onMouseEnter={() => handleMouseEnter('upset')}
-          onMouseLeave={() => handleMouseLeave('upset')}
-          alt="Upset"
-          title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
-        />
-      </a>
-      <h1>How are you?</h1>
-    </div>
+    <>
+      <div className="background-img" style={{ backgroundImage: 'url(src/assets/meadow-homepage.jpeg)' }}>
+        <div className='puppies-container'>
+          <a href="emotions/excited">
+            <img
+              src={emotionImages.excited}
+              onMouseEnter={() => handleMouseEnter('excited')}
+              onMouseLeave={() => handleMouseLeave('excited')}
+              alt="Excited"
+              title={hoveredEmotion === 'excited' ? 'Excited' : ''} 
+            />
+          </a>
+          <a href="emotions/proud">
+            <img
+              src={emotionImages.proud}
+              onMouseEnter={() => handleMouseEnter('proud')}
+              onMouseLeave={() => handleMouseLeave('proud')}
+              alt="Proud"
+              title={hoveredEmotion === 'proud' ? 'Proud' : ''} 
+            />
+          </a>
+          <a href="emotions/stressed">
+            <img
+              src={emotionImages.stressed}
+              onMouseEnter={() => handleMouseEnter('stressed')}
+              onMouseLeave={() => handleMouseLeave('stressed')}
+              alt="Stressed"
+              title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
+            />
+          </a>
+          <a href="emotions/tired">
+            <img
+              src={emotionImages.tired}
+              onMouseEnter={() => handleMouseEnter('tired')}
+              onMouseLeave={() => handleMouseLeave('tired')}
+              alt="Tired"
+              title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
+            />
+          </a>
+          <a href="emotions/upset">
+            <img
+              src={emotionImages.upset}
+              onMouseEnter={() => handleMouseEnter('upset')}
+              onMouseLeave={() => handleMouseLeave('upset')}
+              alt="Upset"
+              title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
+            />
+          </a>
+        </div>
+        <h1 className='prompt'>How are you?</h1>
+      </div>
+    </>
   );
 }
 
