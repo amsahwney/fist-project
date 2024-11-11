@@ -88,9 +88,13 @@ function Header() {
          width: '100vw',        
          height: '100vh',       
        }}>
+
         <h1 className='prompt'>how are you?</h1>
+
         <div className='puppies-container'>
+
           <a href="emotions/upset">
+          <div className="emotion-item">
             <img
               src={emotionImages.upset}
               onMouseEnter={() => handleMouseEnter('upset')}
@@ -98,8 +102,12 @@ function Header() {
               alt="Upset"
               title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
             />
+             <p className="emotion-text">upset</p>
+          </div>
           </a>
+
           <a href="emotions/tired">
+          <div className="emotion-item">
             <img
               src={emotionImages.tired}
               onMouseEnter={() => handleMouseEnter('tired')}
@@ -107,8 +115,12 @@ function Header() {
               alt="Tired"
               title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
             />
+            <p className="emotion-text">tired</p>
+          </div>
           </a>
+
           <a href="emotions/excited">
+          <div className="emotion-item">
             <img
               src={emotionImages.excited}
               onMouseEnter={() => handleMouseEnter('excited')}
@@ -116,8 +128,12 @@ function Header() {
               alt="Excited"
               title={hoveredEmotion === 'excited' ? 'Excited' : ''} 
             />
+            <p className="emotion-text">excited</p>
+          </div>
           </a>
+
           <a href="emotions/proud">
+          <div className="emotion-item">
             <img
               src={emotionImages.proud}
               onMouseEnter={() => handleMouseEnter('proud')}
@@ -125,8 +141,12 @@ function Header() {
               alt="Proud"
               title={hoveredEmotion === 'proud' ? 'Proud' : ''} 
             />
+            <p className="emotion-text">proud</p>
+          </div>
           </a>
+
           <a href="emotions/stressed">
+          <div className="emotion-item">
             <img
               src={emotionImages.stressed}
               onMouseEnter={() => handleMouseEnter('stressed')}
@@ -134,7 +154,10 @@ function Header() {
               alt="Stressed"
               title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
             />
+            <p className="emotion-text">stressed</p>
+          </div>
           </a>
+          
         </div>
       </div>
     </>

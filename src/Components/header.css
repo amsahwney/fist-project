@@ -25,3 +25,21 @@
     margin-left: 5%;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
+
+  .emotion-item {
+    text-align: center;  /* Centers both the image and the text */
+  }
+  
+  .emotion-text {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: bold;
+    font-size: 32px;
+    color: whitesmoke; 
+    background-color: #caae87;  
+    background-color: rgba(202, 174, 135, 0.6); 
+    border-radius: 15px; 
+    padding: 3px 15px;  
+    display: inline-block; 
+    margin-top: -30px;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+  }
