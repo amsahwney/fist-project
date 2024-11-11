@@ -20,8 +20,9 @@ const routes = [
         // I agree with this! so can we delete the homepage component file? -amrita!
       },
       {
-        path: "emotions/:id",
+        path: "emotions/:name",
         element: <Emotions /> 
+// amrita to ask chett for clarification on how useParams works. if I do :id I still get an emotion name. Why? 
       },
       { 
         path: "feedback",

@@ -46,35 +46,13 @@
         "cycles": 6
       }
     ],
-    "playlists": [
-      {
-        "name": "stressed",
-        "id": "37i9dQZF1EIdEbtcbwjUsw"
-      },
-      {
-        "name": "tired",
-        "id": "37i9dQZF1EIedjqyJBu15e"
-      },
-      {
-        "name": "upset",
-        "id": "37i9dQZF1EIgNZCaOGb0Mi"
-      },
-      {
-        "name": "proud",
-        "id": "37i9dQZF1EIcJMh0YzP12p"
-      },
-      {
-        "name": "excited",
-        "id": "37i9dQZF1EIcVD7Tg8a0MY"
-      }
-    ],
     "responses": [
       {
-        "id":1,
+        "id":100,
         "comment": "this is great"
       },
       {
-        "id":2,
+        "id":200, 
          "comment": "I use this app all the time!"
       }
     ]
