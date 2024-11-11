@@ -35,3 +35,13 @@
 .read-the-docs {
   color: #888;
 }
+
+/* is all of the above CSS from the template? can we delete? -amrita! */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+  background-color: #f8f9fa; 
+  color: #333; 
+}

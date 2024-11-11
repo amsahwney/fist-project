@@ -30,7 +30,7 @@ function App() {
       
       <Outlet />
 
-      <footer> created by Amrita, Joyce, and Justin - add a heart here </footer>
+      <footer> created by Amrita, Joyce, and Justin &lt;3 </footer>
 
     </div>
   )
