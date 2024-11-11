@@ -21,7 +21,7 @@
     padding: 1rem;
     background-color: #f0f0f0;
 
-    /* I mnested these a element changes so they do not effect the sibling puppy container */
+    /* I nested these a element changes so they do not effect the sibling puppy container */
     a {
         margin-right: 1rem;
         color: #333;

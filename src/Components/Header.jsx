@@ -88,7 +88,26 @@ function Header() {
          width: '100vw',        
          height: '100vh',       
        }}>
+        <h1 className='prompt'>how are you?</h1>
         <div className='puppies-container'>
+          <a href="emotions/upset">
+            <img
+              src={emotionImages.upset}
+              onMouseEnter={() => handleMouseEnter('upset')}
+              onMouseLeave={() => handleMouseLeave('upset')}
+              alt="Upset"
+              title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
+            />
+          </a>
+          <a href="emotions/tired">
+            <img
+              src={emotionImages.tired}
+              onMouseEnter={() => handleMouseEnter('tired')}
+              onMouseLeave={() => handleMouseLeave('tired')}
+              alt="Tired"
+              title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
+            />
+          </a>
           <a href="emotions/excited">
             <img
               src={emotionImages.excited}
@@ -116,26 +135,7 @@ function Header() {
               title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
             />
           </a>
-          <a href="emotions/tired">
-            <img
-              src={emotionImages.tired}
-              onMouseEnter={() => handleMouseEnter('tired')}
-              onMouseLeave={() => handleMouseLeave('tired')}
-              alt="Tired"
-              title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
-            />
-          </a>
-          <a href="emotions/upset">
-            <img
-              src={emotionImages.upset}
-              onMouseEnter={() => handleMouseEnter('upset')}
-              onMouseLeave={() => handleMouseLeave('upset')}
-              alt="Upset"
-              title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
-            />
-          </a>
         </div>
-        <h1 className='prompt'>How are you?</h1>
       </div>
     </>
   );
