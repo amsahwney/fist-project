@@ -3,9 +3,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App.jsx'
 // import Homepage from './Components/Homepage.jsx'
-import Feedback from './Components/Feedback.jsx'
-import Emotions from './Components/Emotions.jsx'
-import Header from './Components/Header.jsx'
+import Feedback from './components/Feedback.jsx'
+import Emotions from './components/Emotions.jsx'
+import Header from './components/Header.jsx'
 
 const routes = [
   {
@@ -17,6 +17,7 @@ const routes = [
         element: <Header/>
         // i think this needs to be header unless im mistaken 
         // we dont need the homepage component at all as App is functioning as the homepage, -jt
+        // I agree with this! -amrita!
       },
       {
         path: "emotions/:id",
