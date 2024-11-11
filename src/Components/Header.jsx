@@ -82,7 +82,8 @@ function Header() {
   return (
     <>
       <div className="background-img" style={{ backgroundImage: 'url(src/assets/meadow-homepage.jpeg)' }}>
-        <div className='puppies-container'>
+       {/* <h1 className="introduction">FlatIron Support Troupe</h1> */}
+       <div className='puppies-container'>
           <a href="emotions/excited">
             <img
               src={emotionImages.excited}
