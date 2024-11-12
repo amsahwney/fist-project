@@ -84,11 +84,6 @@ function Header() {
 
       <div className="background-img" style={{ 
         backgroundImage: 'url(src/assets/meadow-transparency.svg)',    
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center', 
-        // backgroundRepeat: 'no-repeat',
-        // width: '100vw',
-        // height: '100vh'
        }}>
 
         <h1 className='prompt'>how are you?</h1>
