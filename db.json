@@ -1,80 +1,10 @@
-{
-    "exercises": [
+{"responses": [
       {
-        "id": 1,
-        "name": "Box Breathing",
-        "description": "Inhale, hold, exhale, and hold each for 4 seconds.",
-        "inhaleDuration": 4,
-        "holdDuration": 4,
-        "exhaleDuration": 4,
-        "cycles": 5
-      },
-      {
-        "id": 2,
-        "name": "4-7-8 Breathing",
-        "description": "Inhale for 4, hold for 7, and exhale for 8 seconds.",
-        "inhaleDuration": 4,
-        "holdDuration": 7,
-        "exhaleDuration": 8,
-        "cycles": 5
-      },
-      {
-        "id": 3,
-        "name": "Pursed Lip Breathing",
-        "description": "Inhale for 5 seconds and exhale for 5 seconds with pursed lips.",
-        "inhaleDuration": 5,
-        "holdDuration": 0,
-        "exhaleDuration": 5,
-        "cycles": 5
-      },
-      {
-        "id": 4,
-        "name": "Diaphragmatic Breathing",
-        "description": "Deep breaths focusing on expanding the diaphragm. Inhale for 6 seconds, exhale for 6.",
-        "inhaleDuration": 6,
-        "holdDuration": 0,
-        "exhaleDuration": 6,
-        "cycles": 5
-      },
-      {
-        "id": 5,
-        "name": "Resonant Breathing",
-        "description": "Inhale and exhale slowly, 5 seconds each.",
-        "inhaleDuration": 5,
-        "holdDuration": 0,
-        "exhaleDuration": 5,
-        "cycles": 6
-      }
-    ],
-    "playlists": [
-      {
-        "name": "stressed",
-        "id": "37i9dQZF1EIdEbtcbwjUsw"
-      },
-      {
-        "name": "tired",
-        "id": "37i9dQZF1EIedjqyJBu15e"
-      },
-      {
-        "name": "upset",
-        "id": "37i9dQZF1EIgNZCaOGb0Mi"
-      },
-      {
-        "name": "proud",
-        "id": "37i9dQZF1EIcJMh0YzP12p"
-      },
-      {
-        "name": "excited",
-        "id": "37i9dQZF1EIcVD7Tg8a0MY"
-      }
-    ],
-    "responses": [
-      {
-        "id":1,
+        "id":100,
         "comment": "this is great"
       },
       {
-        "id":2,
+        "id":200, 
          "comment": "I use this app all the time!"
       }
     ]

@@ -14,10 +14,39 @@
     
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
 .prompt {
-    text-align: center;
-}
+    text-align: left;
+    color: whitesmoke;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    margin-left: 5%;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+
+  .emotion-item {
+    text-align: center;  /* Centers both the image and the text */
+  }
+  
+  .emotion-text {
+    font-family: 'Montserrat', sans-serif;  
+    font-weight: bold;
+    font-size: 32px;
+    color: whitesmoke; 
+    background-color: #caae87;  
+    background-color: rgba(202, 174, 135, 0.6); 
+    border-radius: 15px; 
+    padding: 3px 15px;  
+    display: inline-block; 
+    margin-top: -30px;
+    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+  }
+
+
 /* 
 .introduction {
     text-align: center;
 } */
+

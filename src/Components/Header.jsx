@@ -81,46 +81,16 @@ function Header() {
 
   return (
     <>
-      <div className="background-img" style={{ backgroundImage: 'url(src/assets/meadow-homepage.jpeg)' }}>
-       {/* <h1 className="introduction">FlatIron Support Troupe</h1> */}
-       <div className='puppies-container'>
-          <a href="emotions/excited">
-            <img
-              src={emotionImages.excited}
-              onMouseEnter={() => handleMouseEnter('excited')}
-              onMouseLeave={() => handleMouseLeave('excited')}
-              alt="Excited"
-              title={hoveredEmotion === 'excited' ? 'Excited' : ''} 
-            />
-          </a>
-          <a href="emotions/proud">
-            <img
-              src={emotionImages.proud}
-              onMouseEnter={() => handleMouseEnter('proud')}
-              onMouseLeave={() => handleMouseLeave('proud')}
-              alt="Proud"
-              title={hoveredEmotion === 'proud' ? 'Proud' : ''} 
-            />
-          </a>
-          <a href="emotions/stressed">
-            <img
-              src={emotionImages.stressed}
-              onMouseEnter={() => handleMouseEnter('stressed')}
-              onMouseLeave={() => handleMouseLeave('stressed')}
-              alt="Stressed"
-              title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
-            />
-          </a>
-          <a href="emotions/tired">
-            <img
-              src={emotionImages.tired}
-              onMouseEnter={() => handleMouseEnter('tired')}
-              onMouseLeave={() => handleMouseLeave('tired')}
-              alt="Tired"
-              title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
-            />
-          </a>
+
+      <div className="background-img" style={{ backgroundImage: 'url(src/assets/meadow-transparency.svg)',     
+       }}>
+
+        <h1 className='prompt'>how are you?</h1>
+
+        <div className='puppies-container'>
+
           <a href="emotions/upset">
+          <div className="emotion-item">
             <img
               src={emotionImages.upset}
               onMouseEnter={() => handleMouseEnter('upset')}
@@ -128,9 +98,65 @@ function Header() {
               alt="Upset"
               title={hoveredEmotion === 'upset' ? 'Upset' : ''} 
             />
+             <p className="emotion-text">upset</p>
+          </div>
           </a>
+
+          <a href="emotions/tired">
+          <div className="emotion-item">
+            <img
+              src={emotionImages.tired}
+              onMouseEnter={() => handleMouseEnter('tired')}
+              onMouseLeave={() => handleMouseLeave('tired')}
+              alt="Tired"
+              title={hoveredEmotion === 'tired' ? 'Tired' : ''} 
+            />
+            <p className="emotion-text">tired</p>
+          </div>
+          </a>
+
+
+
+          <a href="emotions/excited">
+          <div className="emotion-item">
+            <img
+              src={emotionImages.excited}
+              onMouseEnter={() => handleMouseEnter('excited')}
+              onMouseLeave={() => handleMouseLeave('excited')}
+              alt="Excited"
+              title={hoveredEmotion === 'excited' ? 'Excited' : ''} 
+            />
+            <p className="emotion-text">excited</p>
+          </div>
+          </a>
+
+          <a href="emotions/proud">
+          <div className="emotion-item">
+            <img
+              src={emotionImages.proud}
+              onMouseEnter={() => handleMouseEnter('proud')}
+              onMouseLeave={() => handleMouseLeave('proud')}
+              alt="Proud"
+              title={hoveredEmotion === 'proud' ? 'Proud' : ''} 
+            />
+            <p className="emotion-text">proud</p>
+          </div>
+          </a>
+
+          <a href="emotions/stressed">
+          <div className="emotion-item">
+            <img
+              src={emotionImages.stressed}
+              onMouseEnter={() => handleMouseEnter('stressed')}
+              onMouseLeave={() => handleMouseLeave('stressed')}
+              alt="Stressed"
+              title={hoveredEmotion === 'stressed' ? 'Stressed' : ''} 
+            />
+            <p className="emotion-text">stressed</p>
+          </div>
+          </a>
+          
         </div>
-        <h1 className='prompt'>How are you?</h1>
       </div>
     </>
   );
