@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import excitedImg from '../assets/excited.svg';
 import excitedHoverImg from '../assets/excited-hover.svg';
 import proudImg from '../assets/proud.svg';
