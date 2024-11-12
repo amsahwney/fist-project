@@ -85,7 +85,7 @@ function Header() {
         backgroundImage: 'url(src/assets/meadow-transparency.svg)',    
        }}>
 
-        <h1 className='prompt'>how are you?</h1>
+        <h1 className='prompt'>How are you?</h1>
 
         <div className='puppies-container'>
 
