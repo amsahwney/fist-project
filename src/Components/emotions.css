@@ -126,6 +126,14 @@ audio {
     margin-bottom: 10px;
 }
 
+.weather-card h3 {
+    color: rgba(35, 35, 35);
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3)
+}
+
 .weather-card img {
     width: 100px;
     height: 100px;

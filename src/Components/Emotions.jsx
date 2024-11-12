@@ -16,7 +16,7 @@ function Emotions () {
     const selectPlaylist = pageData.find(page => page.name === emotion)
     const selectExercise = exercises.find(exercise => exercise.emotion === emotion)
 
-    // begin playlist fetch
+// fetching spotify tacks
     async function fetchSpotifyTrackData() {
         const token = await getValidToken();
 
@@ -29,6 +29,7 @@ function Emotions () {
         
     }
 
+// fetching spotify playlists
     async function fetchSpotifyPlaylistData() {
         const token = await getValidToken();
 
@@ -40,6 +41,7 @@ function Emotions () {
         setPlaylistImage(data.images) 
     }
 
+// fetching weather data 
     async function fetchWeatherData(){
         const weatherKey = import.meta.env.VITE_WEATHER_KEY
 
@@ -67,11 +69,13 @@ function Emotions () {
         }  
     }
 
+// loading all fetches on page
     useEffect(()=>{
         fetchSpotifyPlaylistData()
         fetchSpotifyTrackData()
         fetchWeatherData()
     }, [selectPlaylist])
+
 
     // begin page display return
     return (
@@ -84,6 +88,7 @@ function Emotions () {
 
         <h1 className='page-title'> when you're feeling {selectPlaylist.name}...</h1>
 
+{/* rendering all spotify data */}
         <div className="playlist-container">  
             {playlistImage.length && (
             <a className='playlist-cover' href={`https://open.spotify.com/playlist/${selectPlaylist.id}`}>
@@ -114,6 +119,7 @@ function Emotions () {
             </ul>
         </div>
 
+{/* rendering the breathing exercises */}
       <div className='wellness'>
         <h2>a breathing exercise</h2>
         <ul>
@@ -126,7 +132,7 @@ function Emotions () {
         </ul>
       </div>
 
- 
+ {/* rendering the weather data */}
       <div className='weather-card'> 
         <h2>consider {selectPlaylist.consider}</h2>
         <img src={weatherIcon} />
@@ -135,7 +141,7 @@ function Emotions () {
             {weatherData.name && (
                 <div className='weather-report'>
                 <h3>Weather in {weatherData.name}:</h3>
-                <h3>{weatherData.weather[0].description}</h3>
+                <p>{weatherData.weather[0].description}</p>
                 <p> Temp: {weatherData.main.temp} °F </p> 
                 <p> Feels like: {weatherData.main.feels_like} °F</p>
                 </div>
