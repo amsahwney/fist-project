@@ -1,9 +1,13 @@
 .background-img {
     /* position: relative; */
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     height:100vh;
 }
 
@@ -27,7 +31,8 @@
   }
 
   .emotion-item {
-    text-align: center;  /* Centers both the image and the text */
+    text-align: center; 
+     /* Centers both the image and the text */
   }
   
   .emotion-text {
@@ -40,9 +45,9 @@
     border-radius: 15px; 
     padding: 3px 15px;  
     display: inline-block; 
-    margin-top: -30px;
-    /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
-  }
+    margin-top: -30px; 
+     /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); */
+  } 
 
 
 /* 
