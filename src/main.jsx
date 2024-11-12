@@ -14,9 +14,6 @@ const routes = [
       {
         index: true,
         element: <Header/>
-        // i think this needs to be header unless im mistaken 
-        // we dont need the homepage component at all as App is functioning as the homepage, -jt
-        // I agree with this! so can we delete the homepage component file? -amrita!
       },
       {
         path: "emotions/:name",
