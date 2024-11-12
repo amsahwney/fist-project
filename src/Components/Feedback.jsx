@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import "./Feedback.css"
+import React, { useState } from 'react';
+import './Feedback.css';
 
 function Feedback() {
   const [comments, setComment] = useState([
@@ -20,8 +20,6 @@ function Feedback() {
     setNewComment(event.target.value)
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
 
     if (newComment.trim()) {   // NEW COMMENT TO SERVER WITH POST
       const submitComment = {
@@ -71,6 +69,7 @@ function Feedback() {
             )}
             </div>
           </div>
+
         </div>
       </div>
     </div>
@@ -79,3 +78,4 @@ function Feedback() {
 
 
 export default Feedback
+
