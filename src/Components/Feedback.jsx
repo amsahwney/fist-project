@@ -2,23 +2,34 @@ import React, { useState, useEffect } from 'react'
 import "./Feedback.css"
 
 function Feedback() {
-  const [feedback, setFeedback] = useState("")
-  const [comments, setComment] = useState(() => {
-    const savedComments = localStorage.getItem("comments")
-    return savedComments ? JSON.parse(savedComments) : []
-  })
+  const [newComments, setNewComment] = useState("") // NEW COMMENT TO SUBMIT
 
   useEffect(() => {
-    localStorage.setItem("comments", JSON.stringify(comments))
-  }, [comments])
+    fetch("http://localhost:5174/response")
+      .then((response) => response.json())
+      .then((data) => newComments(data))
+      .catch((error) => console.error("Error fetching comments:", error))
+  }, [])
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    if (comments.trim()) {
-      setComment([{id: Date.now(), text: comments}, ...comments])
-      setFeedback("") // Clear input
-    }
+
+    // const submitComment = {
+    //   text: newComments
+    // }
+    if (newComments.trim()) {   // NEW COMMENT TO SERVER WITH POST
+      fetch("http://localhost:3000/response", {
+        method: "POST",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(newComments),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      setNewComment("") //RESET INPUT
+    })
+    .catch((error) => console.error("Error submitting comment", error))
   }
+}
   
   return (
     <div className="feedback-background">
@@ -29,21 +40,24 @@ function Feedback() {
         <textarea
         style={{width: "100%", height: "100px", marginBottom: "10px"}}
       placeholder="Your feedback here..."
-      value={feedback}
-      onChange={(event) => setFeedback(event.target.value)}>
+      value={newComments}
+      onChange={(event) => setNewComment(event.target.value)}>
     </textarea>
         <button type="submit">Submit</button>
       </form>
-      <div className="comment-list">
-        {comments.map(({id, text}) => (
-          <div key={id} className="comment-list">
-            <p>{text}</p>
+
+      {/* <div>
+        <h2>Comments</h2>
+        <div>
+          {newComments.length > 0 ? (
+            newComments.map((id, text) => (
+              <div key={id}> <p>{text}</p>
+            ))
+          }) */}
+
+        </div>
       </div>
-    ))}
       </div>
-      </div>
-      </div>
-    </div>
   )
 }
 
