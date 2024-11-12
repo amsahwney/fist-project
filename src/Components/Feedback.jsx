@@ -2,53 +2,80 @@ import React, { useState } from 'react';
 import './Feedback.css';
 
 function Feedback() {
-  const [newComments, setNewComment] = useState(''); // New comment input
+  const [comments, setComment] = useState([
+    {id: 100, text: "this is great"},
+    {id: 200, text: "I use this app all the time"},
+  ])
 
-  const handleSubmit = (event) => {
-    event.preventDefault(); // Prevent page refresh on submit
+  const [newComment, setNewComment] = useState("")
 
-    const submitComment = {
-      id: Date.now(), // Generate a unique ID
-      text: newComments, // The comment text
-    };
+  // useEffect(() => {
+  //   fetch("http://localhost:5174/response")
+  //     .then((response) => response.json())
+  //     .then((data) => newComments(data))
+  //     .catch((error) => console.error("Error fetching comments:", error))
+  // }, [])
 
-    if (newComments.trim()) { // Only submit if the comment isn't empty
-      // POST the new comment to json-server
-      fetch('http://localhost:3000/responses', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json', // JSON format
-        },
-        body: JSON.stringify(submitComment), // Send the comment as JSON
-      })
-        .then((response) => response.json()) // Parse the response to JSON
-        .then((data) => {
-          setNewComment(''); // Clear the input after successful submission
-        })
-        .catch((error) => {
-          console.error('Error submitting comment:', error); // Handle any errors
-        });
-    }
-  };
+  const handleInputChange = (event) => {
+    setNewComment(event.target.value)
+  }
 
+
+    if (newComment.trim()) {   // NEW COMMENT TO SERVER WITH POST
+      const submitComment = {
+        id: comments.length +1,
+        text: newComment
+      }
+      setNewComment("") //RESET INPUT
+
+      fetch("http://localhost:3000/responses", {
+        method: "POST",
+        headers: {"Content-Type" : "application/json"},
+        body: JSON.stringify(submitComment),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      setComment((prevComments) => [...prevComments, submitComment]);
+    })
+    .catch((error) => console.error("Error submitting comment", error))
+  }
+}
+  
   return (
     <div className="feedback-background">
-      <div style={{ padding: '20px' }}>
-        <div className="feedback">
-          <h2>Tell us what you think!</h2>
-          <form onSubmit={handleSubmit}>
-            <textarea
-              style={{ width: '100%', height: '100px', marginBottom: '10px' }}
-              placeholder="Your feedback here..."
-              value={newComments}
-              onChange={(event) => setNewComment(event.target.value)} // Update the state with input
-            />
-            <button type="submit">Submit</button>
-          </form>
+    <div style={{padding:"20px"}}>
+      <div className="feedback">
+      <h2>Tell us what you think!</h2>
+      <form onSubmit={handleSubmit}>
+        <textarea
+        style={{width: "100%", height: "100px", marginBottom: "10px"}}
+      placeholder="Your feedback here..."
+      value={newComment}
+      onChange={handleInputChange}></textarea>
+        <button type="submit">Submit</button>
+      </form> <br></br>
+
+            <h2>Feedback from our users:</h2>
+      <div class="comments">
+        <div class="feedback-msg">
+            {comments.length > 0 ? (
+              comments.map((comment) => (
+                <div key={comment.id}>               
+                  <p>{comment.text}</p>
+                </div>
+              ))
+            ) : (
+              <p>No comments yet.</p>
+            )}
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   );
 }
 
-export default Feedback;
+
+export default Feedback
+

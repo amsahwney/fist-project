@@ -3,6 +3,8 @@
 .feedback{
     text-align: center;
     padding: 1rem;
+    width: 80%;
+    margin: auto;
 }
 
 h2{
@@ -36,8 +38,14 @@ button:focus {
   outline: 0;
 }
 
-
-.comment-list{
-    margin-top: 1rem;
+.feedback-msg{
+    margin-bottom: 5%;
+    text-align: center;
+    background: #fff3f3;
+    padding: 25px;
+    column-count: 3;
+    column-gap: normal;
+    display: grid;
+    grid-gap: 20px;
 }
 
