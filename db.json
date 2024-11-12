@@ -1,11 +1,11 @@
 {"responses": [
       {
         "id":100,
-        "comment": "this is great"
+        "text": "this is great"
       },
       {
         "id":200, 
-         "comment": "I use this app all the time!"
+         "text": "I use this app all the time!"
       }
     ]
   }
