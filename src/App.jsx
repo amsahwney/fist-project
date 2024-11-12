@@ -1,9 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Header from './components/Header'
 import Navbar from './components/Navbar'
-import Feedback from './components/Feedback'
-import Homepage from './components/Homepage'
 import { Outlet, Routes, Route, Link } from 'react-router-dom'
 
 

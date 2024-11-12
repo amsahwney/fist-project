@@ -81,12 +81,8 @@ function Header() {
 
   return (
     <>
-      <div className="background-img" style={{ backgroundImage: 'url(src/assets/meadow-transparency.svg)',
-         backgroundSize: 'cover',
-         backgroundPosition: 'center',
-         backgroundRepeat: 'no-repeat',
-         width: '100vw',        
-         height: '100vh',       
+
+      <div className="background-img" style={{ backgroundImage: 'url(src/assets/meadow-transparency.svg)',     
        }}>
 
         <h1 className='prompt'>how are you?</h1>
@@ -118,6 +114,8 @@ function Header() {
             <p className="emotion-text">tired</p>
           </div>
           </a>
+
+
 
           <a href="emotions/excited">
           <div className="emotion-item">
