@@ -1,5 +1,7 @@
 .background-img {
     opacity: 0.9; 
+    align-items: center;
+    overflow: auto;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
@@ -9,8 +11,8 @@
     color: rgba(35, 35, 35);
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 64px;
-    margin-left: 20px;
+    font-size: 3rem;
+    margin: 6% 20px 0px 20px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
@@ -23,12 +25,13 @@
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    width: 55%; /* Take up the middle third of the page */
-    height: 45%; /* Adjust height as necessary */
+    width: 55%; 
+    height: 45%; 
     display: flex;
     justify-content: center; 
     align-items: center; 
     margin: 20px;
+    height: auto;
 }
 
 .playlist-cover {
@@ -79,11 +82,14 @@ audio {
 }
 
 .wellness {
-    margin-left: 20px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    width: 30%;
+    width: 55%;
+    height: auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 .wellness h2 {
@@ -109,11 +115,15 @@ audio {
 }
 
 .weather-card {
-    margin: 20px;
+    margin: 0px 0px 0px 20px;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: 8px;
-    width: 20%;
+    display: grid;
+    width: 45%;
+    grid-template-columns: 4fr 6fr;
+    grid-template-rows: 1fr auto;
+    height: auto
 }
 
 .weather-card h2 {
@@ -124,6 +134,7 @@ audio {
     font-size: 32px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 10px;
+    grid-column: 1 / -1;
 }
 
 .weather-card h3 {
@@ -142,4 +153,12 @@ audio {
 
 .weather-report {
     text-align: right;
+}
+
+.flexbox {
+    display: flex;
+    align-items: space-between;
+    justify-content: flex-start;
+    width: 55%; 
+    margin-bottom: 3%;
 }

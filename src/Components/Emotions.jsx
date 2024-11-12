@@ -93,7 +93,7 @@ function Emotions () {
             {playlistImage.length && (
             <a className='playlist-cover' href={`https://open.spotify.com/playlist/${selectPlaylist.id}`}>
                 <img src={playlistImage[0].url}/>
-                <p>click here for a complete playlist</p>
+                <p>click here for a personalized playlist</p>
             </a>
             )}
             
@@ -119,6 +119,7 @@ function Emotions () {
             </ul>
         </div>
 
+<div className='flexbox'>
 {/* rendering the breathing exercises */}
       <div className='wellness'>
         <h2>a breathing exercise</h2>
@@ -140,15 +141,16 @@ function Emotions () {
             <li>
             {weatherData.name && (
                 <div className='weather-report'>
-                <h3>Weather in {weatherData.name}:</h3>
+                <h3>weather in {weatherData.name.toLowerCase()}:</h3>
                 <p>{weatherData.weather[0].description}</p>
-                <p> Temp: {weatherData.main.temp} °F </p> 
-                <p> Feels like: {weatherData.main.feels_like} °F</p>
+                <p> temp: {Math.round(weatherData.main.temp)} °F </p> 
+                <p> feels like: {Math.round(weatherData.main.feels_like)} °F</p>
                 </div>
             )}
             </li>
         </ul>
       </div>
+    </div>
         
         </div>
       )
