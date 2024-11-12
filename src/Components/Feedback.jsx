@@ -2,30 +2,42 @@ import React, { useState, useEffect } from 'react'
 import "./Feedback.css"
 
 function Feedback() {
-  const [newComments, setNewComment] = useState("") // NEW COMMENT TO SUBMIT
+  const [comments, setComment] = useState([
+    {id: 100, text: "this is great"},
+    {id: 200, text: "I use this app all the time"},
+  ])
 
-  useEffect(() => {
-    fetch("http://localhost:5174/response")
-      .then((response) => response.json())
-      .then((data) => newComments(data))
-      .catch((error) => console.error("Error fetching comments:", error))
-  }, [])
+  const [newComment, setNewComment] = useState("")
+
+  // useEffect(() => {
+  //   fetch("http://localhost:5174/response")
+  //     .then((response) => response.json())
+  //     .then((data) => newComments(data))
+  //     .catch((error) => console.error("Error fetching comments:", error))
+  // }, [])
+
+  const handleInputChange = (event) => {
+    setNewComment(event.target.value)
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault()
 
-    // const submitComment = {
-    //   text: newComments
-    // }
-    if (newComments.trim()) {   // NEW COMMENT TO SERVER WITH POST
-      fetch("http://localhost:3000/response", {
+    if (newComment.trim()) {   // NEW COMMENT TO SERVER WITH POST
+      const submitComment = {
+        id: comments.length +1,
+        text: newComment
+      }
+      setNewComment("") //RESET INPUT
+
+      fetch("http://localhost:3000/responses", {
         method: "POST",
         headers: {"Content-Type" : "application/json"},
-        body: JSON.stringify(newComments),
+        body: JSON.stringify(submitComment),
     })
     .then((response) => response.json())
     .then((data) => {
-      setNewComment("") //RESET INPUT
+      setComment((prevComments) => [...prevComments, submitComment]);
     })
     .catch((error) => console.error("Error submitting comment", error))
   }
@@ -40,25 +52,30 @@ function Feedback() {
         <textarea
         style={{width: "100%", height: "100px", marginBottom: "10px"}}
       placeholder="Your feedback here..."
-      value={newComments}
-      onChange={(event) => setNewComment(event.target.value)}>
-    </textarea>
+      value={newComment}
+      onChange={handleInputChange}></textarea>
         <button type="submit">Submit</button>
-      </form>
+      </form> <br></br>
 
-      {/* <div>
-        <h2>Comments</h2>
-        <div>
-          {newComments.length > 0 ? (
-            newComments.map((id, text) => (
-              <div key={id}> <p>{text}</p>
-            ))
-          }) */}
-
+            <h2>Feedback from our users:</h2>
+      <div class="comments">
+        <div class="feedback-msg">
+            {comments.length > 0 ? (
+              comments.map((comment) => (
+                <div key={comment.id}>               
+                  <p>{comment.text}</p>
+                </div>
+              ))
+            ) : (
+              <p>No comments yet.</p>
+            )}
+            </div>
+          </div>
         </div>
       </div>
-      </div>
-  )
+    </div>
+  );
 }
+
 
 export default Feedback

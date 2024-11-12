@@ -1,12 +1,16 @@
-{"responses": [
-      {
-        "id":100,
-        "text": "this is great"
-      },
-      {
-        "id":200, 
-         "text": "I use this app all the time!"
-      }
-    ]
-  }
-  
+{
+  "responses": [
+    {
+      "id": "100",
+      "text": "This is great"
+    },
+    {
+      "id": "200",
+      "text": "I use this app all the time!"
+    },
+    {
+      "id": "300",
+      "text": "Helps me with relaxing"
+    }
+  ]
+}
