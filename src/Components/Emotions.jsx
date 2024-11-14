@@ -103,7 +103,7 @@ function Emotions () {
             {playlistImage.length && (
             <a className='playlist-cover' href={`https://open.spotify.com/playlist/${selectPlaylist.id}`}>
                 <img src={playlistImage[0].url}/>
-                <p>click here for a personalized playlist</p>
+                <p>click here and login for a personal playlist</p>
             </a>
             )}
             

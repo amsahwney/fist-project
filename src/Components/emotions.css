@@ -41,7 +41,7 @@
 
 .playlist-cover p {
     justify-content: center; 
-    align-items: center; 
+    text-align: center; 
     display: flex;
     color: black;
     margin-top: 10px;
