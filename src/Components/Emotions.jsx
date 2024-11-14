@@ -20,26 +20,37 @@ function Emotions () {
     async function fetchSpotifyTrackData() {
         const token = await getValidToken();
 
+    try{
         const response = await fetch(`https://api.spotify.com/v1/playlists/${selectPlaylist.id}/tracks`, {
             headers: {'Authorization': `Bearer ${token}`}
         });
 
         const data = await response.json();
+        if (response.ok){
         setEmotionPlaylist(data.items)
-        
+        }
+
+    } catch (error) {
+        console.error(`Error fetching weather data: ${response.status}`)
+    }   
     }
 
 // fetching spotify playlists
     async function fetchSpotifyPlaylistData() {
         const token = await getValidToken();
 
+    try {
         const response = await fetch(`https://api.spotify.com/v1/playlists/${selectPlaylist.id}`, {
             headers: {'Authorization': `Bearer ${token}`}
         });
 
         const data = await response.json();
         setPlaylistImage(data.images) 
+
+    } catch (error){
+        console.error(`Error fetching weather data:${response.status}`)
     }
+}
 
 // fetching weather data 
     async function fetchWeatherData(){
@@ -54,7 +65,6 @@ function Emotions () {
                     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${weatherKey}&units=imperial`)
                     const data = await response.json();
                     setWeatherData(data)
-                    console.log(weatherData)
 
                 } catch (error) {
                     console.error("Error fetching weather data:", error)
