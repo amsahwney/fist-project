@@ -1,7 +1,7 @@
 # Flatiron Support Troop
 
-A webpage of emotional puppies - a mental wellness tool for Flatiron students and coders everywhere; coding is an emotional rollercoaster... 
-users select an emotion to receive an appropriate spotify playlist, breathing exercisem and wellness activity to accompany their emotion as well as the local weather, encouraging the user  to go outside (weather permitting).   
+A webpage of emotional puppies - a mental wellness tool for Flatiron students and coders everywhere; coding is always an emotional rollercoaster. 
+Users can select an emotion to receive an appropriate spotify playlist, breathing exercise and wellness activity to accompany their emotion as well as the local weather, encouraging the user to go outside (weather permitting).   
 
 ## Installation
 
@@ -15,7 +15,7 @@ npm run dev
 
 ## Usage
 
-Click the puppy that best matches your emotional state to perform a little wellness check-in on your self (not a replacement for professional mental health treatment). Note: users must have location services on for local weather to display. 
+Click the puppy that best matches your emotional state to perform a little wellness check-in on your self (not a replacement for professional mental health treatment). Note: users must allow location services for local weather to display. 
 
 ## Contributing
 
