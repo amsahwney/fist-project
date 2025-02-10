@@ -10,7 +10,9 @@ Run the json-server db.json in your terminal and then run npm run dev to open th
 
 ```bash
 json-server db.json
-npm run dev 
+```
+```bash
+npm run dev
 ```
 
 ## Usage
@@ -34,4 +36,6 @@ Spotify Playlists from Spotify API
 Weather from OpenWeather API
 
 Breathing Exercises and gathered from https://www.healthline.com/health/breathing-exercise
-Wellness Reccomendations based on cursory research. 
+Wellness Reccomendations based on cursory research.
+
+Background images from https://www.reddit.com/r/wallpaper/comments/ge8t0/show_me_your_most_serene_awe_inspiring_mind/ (top comment)
