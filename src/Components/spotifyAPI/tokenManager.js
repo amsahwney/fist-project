@@ -12,7 +12,6 @@ function loadStoredToken() {
     if (storedToken && storedExpiration) {
         token = storedToken;
         expirationTime = parseInt(storedExpiration, 10);
-        console.log("Loaded stored token from localStorage:", token);
     }
 }
 

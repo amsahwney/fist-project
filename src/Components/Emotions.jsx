@@ -13,17 +13,13 @@ function Emotions () {
     const {name: emotion} = useParams()
 
     const selectPlaylist = pageData.find(page => page.name === emotion)
-    console.log("Selected Playlist:", selectPlaylist.id);
 
     const selectExercise = exercises.find(exercise => exercise.emotion === emotion)
 
     // fetching spotify tracks
     async function fetchSpotifyTrackData() {
         const token = await getValidToken();
-        console.log("Spotify Token:", token); // Log the token
-
         const url = `https://api.spotify.com/v1/playlists/${selectPlaylist.id}/tracks`;
-        console.log("Fetching URL:", url); // Log the full URL
 
         try {
             const response = await fetch(url, {
@@ -31,7 +27,6 @@ function Emotions () {
             });
 
             const data = await response.json();
-            console.log("Track Data Response:", data); // Log the response data
 
             if (response.ok) {
                 setEmotionPlaylist(data.items);
@@ -47,10 +42,8 @@ function Emotions () {
     // fetching spotify playlists
     async function fetchSpotifyPlaylistData() {
         const token = await getValidToken();
-        console.log("Spotify Token:", token); // Log the token
-
         const url = `https://api.spotify.com/v1/playlists/${selectPlaylist.id}`;
-        console.log("Fetching URL:", url); // Log the full URL
+
 
         try {
             const response = await fetch(url, {
@@ -58,7 +51,6 @@ function Emotions () {
             });
 
             const data = await response.json();
-            console.log("Playlist Data Response:", data); // Log the response data
 
             if (response.ok) {
                 setPlaylistImage(data.images);
@@ -121,7 +113,7 @@ function Emotions () {
             {playlistImage.length && (
             <a className='playlist-cover' href={`https://open.spotify.com/playlist/${selectPlaylist.id}`}>
                 <img src={playlistImage[0].url}/>
-                <p>click here and login for a personal playlist</p>
+                <p>click here ↑ to get the full spotify playlist</p>
             </a>
             )}
             
