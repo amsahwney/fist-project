@@ -23,13 +23,13 @@ button {
   align-items: center;
   padding: 4px 10px;
   border-radius: 6px;
-  color: #3D3D3D;
-  border: none;
+  color: #fff3f3;
+  border-color: #fff3f3;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   text-align: center;
-    font-family: "Risque", serif;
+  font-family: "Lucida Console", Monaco, monospace;
     background-color: rgba(255, 255, 255, 0);
 }
 

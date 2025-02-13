@@ -53,12 +53,12 @@ return (
       placeholder="Your feedback here..."
       value={newComment}
       onChange={handleInputChange}></textarea>
-        <button type="submit">Submit</button>
+        <button type="submit">submit</button>
       </form> <br></br>
 
             <h2>Feedback from our users:</h2>
-      <div class="comments">
-        <div class="feedback-msg">
+      <div className="comments">
+        <div className="feedback-msg">
             {comments.length > 0 ? (
               comments.map((comment) => (
                 <div key={comment.id}>
